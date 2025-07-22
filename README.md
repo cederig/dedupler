@@ -1,4 +1,3 @@
-'''
 # Dedupler
 
 A simple, fast, and configurable tool written in Rust to remove duplicate lines from files. It can process a single file or an entire directory, with options for outputting to a file or the terminal, ignoring specific files, and displaying execution statistics.
@@ -154,4 +153,3 @@ To run the built-in unit tests, use the following command:
 ```bash
 cargo test
 ```
-'''
