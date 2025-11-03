@@ -86,7 +86,7 @@ The macOS executable will be located in `target/<your_mac_target>/release/dedupl
 
 ## Usage
 
-```bash
+```sh
 dedupler [OPTIONS] [FILE]
 ```
 

@@ -86,7 +86,7 @@ L'exécutable pour macOS se trouvera dans `target/<votre_cible_mac>/release/dedu
 
 ## Utilisation
 
-```bash
+```sh
 dedupler [OPTIONS] [FILE]
 ```
 
