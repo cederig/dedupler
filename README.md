@@ -148,7 +148,6 @@ For example:
 This project includes unit tests; to run them, use the following command at the project root:
 
 ```sh
-
 cargo test
 ```
 

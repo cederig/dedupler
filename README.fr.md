@@ -147,7 +147,6 @@ Par exemple :
 Ce projet inclut des tests unitaires; pour les exécuter, utilisez la commande suivante à la racine du projet :
 
 ```sh
-
 cargo test
 ```
 
