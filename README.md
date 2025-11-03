@@ -4,14 +4,14 @@
 
 ## Features
 
--   Fast Deduplication: Utilizes `HashSet` for efficient line processing.
--   Directory Processing: Recursively find and process files in a directory.
--   File Ignoring: Supports `.gitignore` patterns and custom ignore rules using the `ignore` crate.
--   Flexible Output: Write results to a specified output file or to standard output.
--   Progress Bar: Visual feedback on the file processing progress with `indicatif`.
--   Execution Statistics: Get detailed stats on lines read, duplicates found, and processing time.
--   Cross-Platform: Compiles and runs on Linux, macOS, and Windows.
--   Robust Encoding Handling: Automatically detects and handles various file encodings (UTF-8, UTF-16, Windows-1252, etc.) without crashing.
+- Fast deduplication using `HashSet` for efficient line processing.
+- Recursive directory processing to find and handle files.
+- Support for `.gitignore` patterns and custom ignore rules via the `ignore` crate.
+- Flexible output to a specified file or standard output.
+- Visual feedback with a progress bar from `indicatif`.
+- Detailed execution statistics, including lines read, duplicates, and processing time.
+- Cross-platform compatibility with Linux, macOS, and Windows.
+- Robust handling of various file encodings like UTF-8, UTF-16, and Windows-1252.
 
 ## Dependencies
 

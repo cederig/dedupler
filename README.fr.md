@@ -4,14 +4,14 @@
 
 ## Fonctionnalités
 
--   Dédoublonnage Rapide: Utilise `HashSet` pour un traitement efficace des lignes.
--   Traitement de Répertoire: Recherche et traite récursivement les fichiers dans un répertoire.
--   Ignorer des Fichiers: Prend en charge les motifs `.gitignore` et les règles d'ignorance personnalisées à l'aide de la caisse `ignore`.
--   Sortie Flexible: Écrit les résultats dans un fichier de sortie spécifié ou sur la sortie standard.
--   Barre de Progression: Retour visuel sur la progression du traitement des fichiers avec `indicatif`.
--   Statistiques d'Exécution: Obtenez des statistiques détaillées sur les lignes lues, les doublons trouvés et le temps de traitement.
--   Multi-plateforme: Compile et s'exécute sur Linux, macOS et Windows.
--   Gestion Robuste des Encodages: Détecte et traite automatiquement une variété d'encodages de fichiers (UTF-8, UTF-16, Windows-1252, etc.) sans planter.
+- Dédoublonnage rapide grâce à `HashSet` pour un traitement efficace.
+- Traitement récursif des répertoires pour trouver et gérer les fichiers.
+- Prise en charge des motifs `.gitignore` et des règles d'ignorance personnalisées avec `ignore`.
+- Sortie flexible vers un fichier spécifié ou la sortie standard.
+- Retour visuel avec une barre de progression `indicatif`.
+- Statistiques d'exécution détaillées (lignes lues, doublons, temps de traitement).
+- Compatibilité multiplateforme avec Linux, macOS et Windows.
+- Gestion robuste de divers encodages de fichiers (UTF-8, UTF-16, Windows-1252).
 
 ## Dépendances
 
