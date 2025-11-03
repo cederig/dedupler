@@ -4,14 +4,14 @@ A simple, fast, and configurable tool written in Rust to remove duplicate lines 
 
 ## Features
 
--   **Fast Deduplication**: Utilizes `HashSet` for efficient line processing.
--   **Directory Processing**: Recursively find and process files in a directory.
--   **File Ignoring**: Supports `.gitignore` patterns and custom ignore rules using the `ignore` crate.
--   **Flexible Output**: Write results to a specified output file or to standard output.
--   **Progress Bar**: Visual feedback on the file processing progress with `indicatif`.
--   **Execution Statistics**: Get detailed stats on lines read, duplicates found, and processing time.
--   **Cross-Platform**: Compiles and runs on Linux, macOS, and Windows.
--   **Robust Encoding Handling**: Automatically detects and handles various file encodings (UTF-8, UTF-16, Windows-1252, etc.) without crashing.
+-   Fast Deduplication: Utilizes `HashSet` for efficient line processing.
+-   Directory Processing: Recursively find and process files in a directory.
+-   File Ignoring: Supports `.gitignore` patterns and custom ignore rules using the `ignore` crate.
+-   Flexible Output: Write results to a specified output file or to standard output.
+-   Progress Bar: Visual feedback on the file processing progress with `indicatif`.
+-   Execution Statistics: Get detailed stats on lines read, duplicates found, and processing time.
+-   Cross-Platform: Compiles and runs on Linux, macOS, and Windows.
+-   Robust Encoding Handling: Automatically detects and handles various file encodings (UTF-8, UTF-16, Windows-1252, etc.) without crashing.
 
 ## Dependencies
 

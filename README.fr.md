@@ -1,18 +1,17 @@
-'''
 # Dedupler
 
 Un outil simple, rapide et configurable écrit en Rust pour supprimer les lignes en double des fichiers. Il peut traiter un seul fichier ou un répertoire entier, avec des options pour écrire la sortie dans un fichier ou dans le terminal, ignorer des fichiers spécifiques et afficher des statistiques d'exécution.
 
 ## Fonctionnalités
 
--   **Dédoublonnage Rapide**: Utilise `HashSet` pour un traitement efficace des lignes.
--   **Traitement de Répertoire**: Recherche et traite récursivement les fichiers dans un répertoire.
--   **Ignorer des Fichiers**: Prend en charge les motifs `.gitignore` et les règles d'ignorance personnalisées à l'aide de la caisse `ignore`.
--   **Sortie Flexible**: Écrit les résultats dans un fichier de sortie spécifié ou sur la sortie standard.
--   **Barre de Progression**: Retour visuel sur la progression du traitement des fichiers avec `indicatif`.
--   **Statistiques d'Exécution**: Obtenez des statistiques détaillées sur les lignes lues, les doublons trouvés et le temps de traitement.
--   **Multi-plateforme**: Compile et s'exécute sur Linux, macOS et Windows.
--   **Gestion Robuste des Encodages**: Détecte et traite automatiquement une variété d'encodages de fichiers (UTF-8, UTF-16, Windows-1252, etc.) sans planter.
+-   Dédoublonnage Rapide: Utilise `HashSet` pour un traitement efficace des lignes.
+-   Traitement de Répertoire: Recherche et traite récursivement les fichiers dans un répertoire.
+-   Ignorer des Fichiers: Prend en charge les motifs `.gitignore` et les règles d'ignorance personnalisées à l'aide de la caisse `ignore`.
+-   Sortie Flexible: Écrit les résultats dans un fichier de sortie spécifié ou sur la sortie standard.
+-   Barre de Progression: Retour visuel sur la progression du traitement des fichiers avec `indicatif`.
+-   Statistiques d'Exécution: Obtenez des statistiques détaillées sur les lignes lues, les doublons trouvés et le temps de traitement.
+-   Multi-plateforme: Compile et s'exécute sur Linux, macOS et Windows.
+-   Gestion Robuste des Encodages: Détecte et traite automatiquement une variété d'encodages de fichiers (UTF-8, UTF-16, Windows-1252, etc.) sans planter.
 
 ## Dépendances
 
@@ -153,4 +152,3 @@ Pour exécuter les tests unitaires intégrés, utilisez la commande suivante:
 ```bash
 cargo test
 ```
-'''
