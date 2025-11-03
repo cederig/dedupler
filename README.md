@@ -40,7 +40,7 @@ Make sure you have Rust and Cargo installed on your system. You can install them
     ```sh
     cargo build --release
     ```
-    The executable will be located in `target/release/dedupler`.
+The Windows executable will be located in `target/release/dedupler`.
 
 ### Compiling for Windows (from Linux/macOS)
 
