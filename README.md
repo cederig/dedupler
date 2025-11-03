@@ -1,6 +1,6 @@
 # Dedupler
 
-A simple, fast, and configurable tool written in Rust to remove duplicate lines from files. It can process a single file or an entire directory, with options for outputting to a file or the terminal, ignoring specific files, and displaying execution statistics.
+`dedupler` is a simple and fast command-line tool written in Rust to remove duplicate lines from files. It can process a single file or an entire directory, with options for outputting to a file or the terminal, ignoring specific files, and displaying execution statistics.
 
 ## Features
 
@@ -14,6 +14,8 @@ A simple, fast, and configurable tool written in Rust to remove duplicate lines 
 -   Robust Encoding Handling: Automatically detects and handles various file encodings (UTF-8, UTF-16, Windows-1252, etc.) without crashing.
 
 ## Dependencies
+
+This project uses the following Rust dependencies (as defined in `Cargo.toml`):
 
 - `clap` (version `4.5.41`) : For command-line argument parsing.
 - `indicatif` (version `0.18.0`) : For displaying a progress bar.
@@ -85,55 +87,48 @@ The macOS executable will be located in `target/<your_mac_target>/release/dedupl
 
 ## Usage
 
-```
+```bash
 dedupler [OPTIONS] [FILE]
 ```
 
 ### Arguments
 
--   `[FILE]`
-    -   The input file to process. Cannot be used with `-d` / `--directory`.
+-   `[FILE]` : The input file to process. Cannot be used with `-d` / `--directory`.
 
 ### Options
 
--   `-d, --directory <DIRECTORY>`
-    -   Process all files in the specified directory. Cannot be used with `[FILE]`.
--   `-o, --output <OUTPUT>`
-    -   Path to the output file. If not provided, results are printed to the terminal. When processing a directory, this specifies an output directory to mirror the input structure.
--   `--stat`
-    -   Show detailed execution statistics.
--   `--ignore <PATTERN>`
-    -   A glob pattern of files/directories to ignore. Can be specified multiple times. (e.g., `--ignore '*.log' --ignore 'tmp/'`)
--   `-h, --help`
-    -   Print help information.
--   `-V, --version`
-    -   Print version information.
+-   `-d, --directory <DIRECTORY>` : Process all files in the specified directory. Cannot be used with `[FILE]`.
+-   `-o, --output <OUTPUT>` : Path to the output file. If not provided, results are printed to the terminal. When processing a directory, this specifies an output directory to mirror the input structure.
+-   `--stat` : Show detailed execution statistics.
+-   `--ignore <PATTERN>` : A glob pattern of files/directories to ignore. Can be specified multiple times. (e.g., `--ignore '*.log' --ignore 'tmp/'`)
+-   `-h, --help` : Print help information.
+-   `-V, --version` : Print version information.
 
 ## Examples
 
-1.  **Deduplicate a single file and print to terminal:**
-    ```bash
+-   Deduplicate a single file and print to terminal:
+    ```sh
     dedupler my_file.txt
     ```
 
-2.  **Deduplicate a file and save to another file:**
-    ```bash
+-   Deduplicate a file and save to another file:
+    ```sh
     dedupler my_file.txt -o my_file_deduplicated.txt
     ```
 
-3.  **Deduplicate a file and show stats:**
-    ```bash
+-   Deduplicate a file and show stats:
+    ```sh
     dedupler my_file.txt --stat
     ```
 
-4.  **Deduplicate all files in a directory and save them to a new directory:**
-    ```bash
+-   Deduplicate all files in a directory and save them to a new directory:
+    ```sh
     mkdir output_dir
     dedupler -d ./source_dir -o ./output_dir
     ```
 
-5.  **Deduplicate a directory, ignoring log files and the `temp` subdirectory:**
-    ```bash
+-   Deduplicate a directory, ignoring log files and the `temp` subdirectory:
+    ```sh
     dedupler -d ./my_project --ignore '*.log' --ignore 'temp/'
     ```
 
@@ -148,8 +143,11 @@ The patterns are glob patterns. For example:
 
 ## Tests
 
-To run the built-in unit tests, use the following command:
+This project includes unit tests; to run them, use the following command at the project root:
 
-```bash
+```sh
+
 cargo test
 ```
+
+This command compiles the program in test mode and executes all test functions.

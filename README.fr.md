@@ -1,6 +1,6 @@
 # Dedupler
 
-Un outil simple, rapide et configurable écrit en Rust pour supprimer les lignes en double des fichiers. Il peut traiter un seul fichier ou un répertoire entier, avec des options pour écrire la sortie dans un fichier ou dans le terminal, ignorer des fichiers spécifiques et afficher des statistiques d'exécution.
+`dedupler` est un outil en ligne de commande simple et rapide écrit en Rust pour supprimer les lignes en double des fichiers. Il peut traiter un seul fichier ou un répertoire entier, avec des options pour écrire la sortie dans un fichier ou dans le terminal, ignorer des fichiers spécifiques et afficher des statistiques d'exécution.
 
 ## Fonctionnalités
 
@@ -14,6 +14,8 @@ Un outil simple, rapide et configurable écrit en Rust pour supprimer les lignes
 -   Gestion Robuste des Encodages: Détecte et traite automatiquement une variété d'encodages de fichiers (UTF-8, UTF-16, Windows-1252, etc.) sans planter.
 
 ## Dépendances
+
+Ce projet utilise les dépendances suivantes (telles que définies dans `Cargo.toml`) :
 
 - `clap` (version `4.5.41`) : Pour l'analyse des arguments de la ligne de commande.
 - `indicatif` (version `0.18.0`) : Pour afficher une barre de progression.
@@ -84,71 +86,67 @@ L'exécutable pour macOS se trouvera dans `target/<votre_cible_mac>/release/dedu
 
 ## Utilisation
 
-```
+```bash
 dedupler [OPTIONS] [FILE]
 ```
 
-## Arguments
+### Arguments
 
--   `[FILE]`
-    -   Le fichier d'entrée à traiter. Ne peut pas être utilisé avec `-d` / `--directory`.
+-   `[FILE]` : Le fichier d'entrée à traiter. Ne peut pas être utilisé avec `-d` / `--directory`.
 
-## Options
+### Options
 
--   `-d, --directory <DIRECTORY>`
-    -   Traite tous les fichiers dans le répertoire spécifié. Ne peut pas être utilisé avec `[FILE]`.
--   `-o, --output <OUTPUT>`
-    -   Chemin vers le fichier de sortie. Si non fourni, les résultats sont affichés dans le terminal. Lors du traitement d'un répertoire, cela spécifie un répertoire de sortie pour refléter la structure d'entrée.
--   `--stat`
-    -   Affiche les statistiques d'exécution détaillées.
--   `--ignore <PATTERN>`
-    -   Un motif glob de fichiers/répertoires à ignorer. Peut être spécifié plusieurs fois. (par exemple, `--ignore '*.log' --ignore 'tmp/'`)
--   `-h, --help`
-    -   Affiche les informations d'aide.
--   `-V, --version`
-    -   Affiche les informations de version.
+-   `-d, --directory <DIRECTORY>` : Traite tous les fichiers dans le répertoire spécifié. Ne peut pas être utilisé avec `[FILE]`.
+-   `-o, --output <OUTPUT>` : Chemin vers le fichier de sortie. Si non fourni, les résultats sont affichés dans le terminal. Lors du traitement d'un répertoire, cela spécifie un répertoire de sortie pour refléter la structure d'entrée.
+-   `--stat` : Affiche les statistiques d'exécution détaillées.
+-   `--ignore <PATTERN>` : Un motif glob de fichiers/répertoires à ignorer. Peut être spécifié plusieurs fois. (par exemple, `--ignore '*.log' --ignore 'tmp/'`)
+-   `-h, --help` : Affiche les informations d'aide.
+-   `-V, --version` : Affiche les informations de version.
 
 ## Exemples
 
-1.  **Dédoublonner un seul fichier et afficher dans le terminal:**
-    ```bash
-    dedupler mon_fichier.txt
+-   Dédoublonner un seul fichier et afficher dans le terminal :
+    ```sh
+    ./dedupler mon_fichier.txt
     ```
 
-2.  **Dédoublonner un fichier et enregistrer dans un autre fichier:**
-    ```bash
-    dedupler mon_fichier.txt -o mon_fichier_dedoublonne.txt
+-   Dédoublonner un fichier et enregistrer dans un autre fichier :
+    ```sh
+    ./dedupler mon_fichier.txt -o mon_fichier_dedoublonne.txt
     ```
 
-3.  **Dédoublonner un fichier et afficher les statistiques:**
-    ```bash
-    dedupler mon_fichier.txt --stat
+-   Dédoublonner un fichier et afficher les statistiques :
+    ```sh
+    ./dedupler mon_fichier.txt --stat
     ```
 
-4.  **Dédoublonner tous les fichiers d'un répertoire et les enregistrer dans un nouveau répertoire:**
-    ```bash
+-   Dédoublonner tous les fichiers d'un répertoire et les enregistrer dans un nouveau répertoire :
+    ```sh
     mkdir repertoire_sortie
-    dedupler -d ./repertoire_source -o ./repertoire_sortie
+    ./dedupler -d ./repertoire_source -o ./repertoire_sortie
     ```
 
-5.  **Dédoublonner un répertoire, en ignorant les fichiers de log et le sous-répertoire `temp`:**
-    ```bash
-    dedupler -d ./mon_projet --ignore '*.log' --ignore 'temp/'
+-   Dédoublonner un répertoire, en ignorant les fichiers de log et le sous-répertoire `temp`:
+    ```sh
+    ./dedupler -d ./mon_projet --ignore '*.log' --ignore 'temp/'
     ```
 
 ## Ignorer des Fichiers
 
 L'outil respecte automatiquement les fichiers `.gitignore` et `.ignore` dans le répertoire en cours de traitement. Vous pouvez ajouter d'autres motifs d'ignorance à l'aide de l'option `--ignore`.
 
-Les motifs sont des motifs glob. Par exemple:
+Les motifs sont des motifs glob. Par exemple :
 -   `--ignore '*.tmp'`: Ignore tous les fichiers avec l'extension `.tmp`.
 -   `--ignore 'logs/'`: Ignore le répertoire `logs`.
 -   `--ignore '**/temp*'`: Ignore tous les fichiers et répertoires commençant par `temp` dans n'importe quel sous-répertoire.
 
 ## Tests
 
-Pour exécuter les tests unitaires intégrés, utilisez la commande suivante:
+Ce projet inclut des tests unitaires; pour les exécuter, utilisez la commande suivante à la racine du projet :
 
-```bash
+```sh
+
 cargo test
 ```
+
+Cette commande compile le programme en mode test et exécute toutes les fonctions de test.
