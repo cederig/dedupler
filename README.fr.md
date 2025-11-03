@@ -133,9 +133,11 @@ dedupler [OPTIONS] [FILE]
 
 ## Ignorer des Fichiers
 
-L'outil respecte automatiquement les fichiers `.gitignore` et `.ignore` dans le répertoire en cours de traitement. Vous pouvez ajouter d'autres motifs d'ignorance à l'aide de l'option `--ignore`.
+`dedupler` respecte automatiquement les règles définies dans les fichiers `.gitignore` et `.ignore` dans le répertoire en cours de traitement.
 
-Les motifs sont des motifs glob. Par exemple :
+Vous pouvez ajouter d'autres motifs d'ignorance à l'aide de l'option `--ignore`.
+
+Par exemple :
 -   `--ignore '*.tmp'`: Ignore tous les fichiers avec l'extension `.tmp`.
 -   `--ignore 'logs/'`: Ignore le répertoire `logs`.
 -   `--ignore '**/temp*'`: Ignore tous les fichiers et répertoires commençant par `temp` dans n'importe quel sous-répertoire.

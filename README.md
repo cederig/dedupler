@@ -134,9 +134,11 @@ dedupler [OPTIONS] [FILE]
 
 ## Ignoring Files
 
-The tool automatically respects `.gitignore` and `.ignore` files in the directory being processed. You can add more ignore patterns using the `--ignore` flag.
+`deduple` automatically respects rules defined in `.gitignore` and `.ignore` files in the directory being processed.
 
-The patterns are glob patterns. For example:
+You can add more ignore patterns using the `--ignore` flag.
+
+For example:
 -   `--ignore '*.tmp'`: Ignores all files with the `.tmp` extension.
 -   `--ignore 'logs/'`: Ignores the `logs` directory.
 -   `--ignore '**/temp*'`: Ignores all files and directories starting with `temp` in any subdirectory.
