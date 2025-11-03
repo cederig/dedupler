@@ -17,12 +17,12 @@
 
 This project uses the following Rust dependencies (as defined in `Cargo.toml`):
 
-- `clap` (version `4.5.41`) : For command-line argument parsing.
-- `indicatif` (version `0.18.0`) : For displaying a progress bar.
+- `clap` (version `4.5.51`) : For command-line argument parsing.
+- `indicatif` (version `0.18.2`) : For displaying a progress bar.
 - `encoding_rs` (version `0.8.35`) : For file encoding management.
 - `encoding_rs_io` (version `0.1.7`) : For reading files with different encodings.
-- `ignore` (version `0.4.23`) : For ignoring files and directories.
-- `tempfile` (version `3.20.0`) : For creating temporary files and directories in tests.
+- `ignore` (version `0.4.25`) : For ignoring files and directories.
+- `tempfile` (version `3.23.0`) : For creating temporary files and directories in tests.
 
 ## Installation
 
