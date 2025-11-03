@@ -30,7 +30,7 @@ Ce projet utilise les dépendances suivantes (telles que définies dans `Cargo.t
 
 Assurez-vous d'avoir Rust et Cargo d'installés sur votre système. Vous pouvez les installer en suivant les instructions sur le site officiel de Rust : [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
 
-### Compilation pour Linux (depuis Linux/macOS)
+### Compilation pour Linux (depuis Linux)
 1.  Clonez ce dépôt :
     ```sh
     git clone https://github.com/cederig/dedupler.git
@@ -42,7 +42,7 @@ Assurez-vous d'avoir Rust et Cargo d'installés sur votre système. Vous pouvez 
     ```
     L'exécutable se trouvera dans `target/release/dedupler`.
 
-### Compilation pour Windows (depuis Linux/macOS)
+### Compilation pour macOS (depuis Linux/macOS)
 
 Pour compiler ce projet pour Windows à partir d'un autre système d'exploitation (comme Linux ou macOS), vous pouvez utiliser la compilation croisée. Vous aurez besoin de la cible Rust pour Windows.
 
@@ -82,7 +82,7 @@ Pour compiler ce projet pour macOS à partir d'un autre système d'exploitation 
         cargo build --release --target=aarch64-apple-darwin
         ```
 
-L'exécutable pour macOS se trouvera dans `target/<votre_cible_mac>/release/dedupler` (par exemple, `target/x86_64-apple-darwin/release/dedupler`).
+L'exécutable pour macOS se trouvera dans `target/<votre_cible_mac>/release/dedupler`.
 
 ## Utilisation
 
