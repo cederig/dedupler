@@ -1,15 +1,21 @@
 [package]
 name = "dedupler"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 
 [dependencies]
 clap = { version = "4.5.51", features = ["derive"] }
-indicatif = "0.18.2"
+indicatif = "0.18.3"
 ignore = "0.4.25"
 chardet = "0.2.4"
 encoding_rs = "0.8.35"
 encoding_rs_io = "0.1.7"
+rayon = "1.11.0"
 
 [dev-dependencies]
 tempfile = "3.23.0"
+criterion = { version = "0.7.0", features = ["html_reports"] }
+
+[[bench]]
+name = "dedup_benchmarks"
+harness = false
