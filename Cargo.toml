@@ -17,5 +17,5 @@ tempfile = "3.23.0"
 criterion = { version = "0.7.0", features = ["html_reports"] }
 
 [[bench]]
-name = "dedup_benchmarks"
+name = "performance"
 harness = false
